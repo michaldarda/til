@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-1. [Elixir](###Elixir)
-2. [Phoenix](###Phoenix)
+1. [Elixir](#elixir)
+2. [Phoenix](#phoenix)
 
 ### Elixir
 
