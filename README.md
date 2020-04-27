@@ -9,14 +9,14 @@
 
 #### Shell history
 
-In order to enable shell history add this to your ~/.bash_rc (or zsh or whatever u use)
+In order to enable shell history add this to your `~/.bashrc` (or `~/.zshrc` or whatever you use)
 
-```
+```bash
 export ERL_AFLAGS="-kernel shell_history enabled"
 ```
 
 or for fish
-```
+```fish
 set -x ERL_AFLAGS "-kernel shell_history enabled"
 ```
 
@@ -26,6 +26,6 @@ set -x ERL_AFLAGS "-kernel shell_history enabled"
 
 You can supply various parameters to mix phx.new, one of them is `--module` which allows you to modify how your app main module will be named. So if you have not straight mapping from underscore to camelcase you can supply your own.
 
-```
+```bash
 mix phx.new nottrivial_app --module NotTrivialApp
 ```
