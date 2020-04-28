@@ -3,8 +3,9 @@
 ## Table of Contents
 
 1. [Clojure](#clojure)
-2. [Elixir](#elixir)
-3. [Phoenix](#phoenix)
+2. [Ecto](#ecto)
+3. [Elixir](#elixir)
+4. [Phoenix](#phoenix)
 
 ### Clojure
 
@@ -32,6 +33,16 @@ user=> (#{1 2 3} 3)
 user=> (#{1 2 3} 0)
 nil
 ```
+
+### Ecto
+
+#### `insert` errors
+
+When you call `Ecto.Repo.insert/2` you can't expect to return either `{:ok, struct}` or `{:error, error}. In case of connection connection failures/non existing table/DB errors Ecto will raise an exception.
+
+From Ecto docs:
+
+It returns {:ok, struct} if the struct has been successfully inserted or {:error, changeset} *if there was a validation or a known constraint error*.
 
 ### Elixir
 
