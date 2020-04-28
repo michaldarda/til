@@ -38,7 +38,7 @@ nil
 
 #### `insert/2` return values
 
-When you call `Ecto.Repo.insert/2` you can't expect to return either `{:ok, struct}` or `{:error, error}. In case of connection connection failures/non existing table/DB errors Ecto will raise an exception.
+When you call `Ecto.Repo.insert/2` you can't expect to return either `{:ok, struct}` or `{:error, error}`. In case of connection connection failures/non existing table/DB errors Ecto will raise an exception.
 
 From Ecto docs:
 
