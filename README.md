@@ -70,8 +70,10 @@ iex(3)> s
 "Elixir"
 iex(4)> rest
 "so cool"
-``
+```
+
 This has some limitations like only the last binary can be without size, but has some cool things like binary-size being variable.
+
 ```elixir
 iex(1)> n = 6
 iex(2)> <<s::binary-size(n), " is ", rest::binary>> = "Elixir is so cool"
