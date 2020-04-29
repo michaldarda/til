@@ -59,6 +59,26 @@ or for fish
 set -x ERL_AFLAGS "-kernel shell_history enabled"
 ```
 
+#### Pattern match on binaries
+
+You can pattern match on binaries using this syntax
+
+```elixir
+iex(2)> <<s::binary-size(6), " is ", rest::binary>> = "Elixir is so cool"
+"Elixir is so cool"
+iex(3)> s
+"Elixir"
+iex(4)> rest
+"so cool"
+``
+This has some limitations like only the last binary can be without size, but has some cool things like binary-size being variable.
+```elixir
+iex(1)> n = 6
+iex(2)> <<s::binary-size(n), " is ", rest::binary>> = "Elixir is so cool"
+```
+
+More on that can be found in [Elixir's special forms docs](https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1)
+
 ### Phoenix
 
 #### App module name
