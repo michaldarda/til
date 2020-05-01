@@ -2,10 +2,19 @@
 
 ## Table of Contents
 
-1. [Clojure](#clojure)
-2. [Ecto](#ecto)
-3. [Elixir](#elixir)
-4. [Phoenix](#phoenix)
+1. [Arch Linux](#arch-linux)
+2. [Clojure](#clojure)
+3. [Ecto](#ecto)
+4. [Elixir](#elixir)
+5. [Phoenix](#phoenix)
+
+### Arch Linux
+
+#### List packages installed from AUR
+
+```bash
+pacman -Qm
+```
 
 ### Clojure
 
