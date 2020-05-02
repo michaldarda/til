@@ -16,6 +16,21 @@
 pacman -Qm
 ```
 
+### Regain disk space
+
+Cleanup pacman cache
+```
+sudo pacman -Scc
+```
+
+Cleanup yay AUR cache
+
+```
+yay -Scc
+```
+
+Remove `~/.cache`.
+
 ### Clojure
 
 #### Collections are functions
