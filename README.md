@@ -105,6 +105,29 @@ iex(2)> <<s::binary-size(n), " is ", rest::binary>> = "Elixir is so cool"
 
 More on that can be found in [Elixir's special forms docs](https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1)
 
+#### Selecting records from mnesia
+
+```elixir
+14
+iex(7)> {ok, [grant]} = :mnesia.transaction(fn -> :mnesia.match_object({:my_table, 1, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_, :_}) end)
+{:atomic,
+ [
+   {:my_table, 1, "93585ef3-95c5-41cb-9b0f-c1522b95878f",
+    "3c45caa6-c9e9-49a1-9df8-171d8665e24b",
+    {{2020, 5, 21}, {14, 36, 23, 163447}},
+    {{2020, 5, 21}, {14, 36, 23, 163450}}, "1253511464400978977",
+    "63834ff4-0353-44e8-8ec2-e9585d0004e5",
+    "fc574814-9b36-11ea-8f7e-02420a0f6e68", "data",
+    "309d4055-2609-4205-a669-47160d6a51f0",
+    "af1ef770-5765-4a8e-a5a4-ee187a8406dd",
+    "data", true,
+    1590093383, nil, "data", "data",
+    "data", "data", "data", "initiated", %{}}
+ ]}
+```
+
+Unfortunately you need to put there as many `:_` as record have fields cause record in mnesia is just an ordered tuple (Don't know if it can be something else - **probably yes**- but in my case it was tuple, it was inserted by [ecto_mnesia](https://github.com/Nebo15/ecto_mnesia) and I needed to select it in plain :mnesia).
+
 ### Phoenix
 
 #### App module name
